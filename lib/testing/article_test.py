@@ -1,4 +1,3 @@
-import pytest
 from classes.many_to_many import Article, Magazine, Author
 
 class TestArticle:
@@ -20,7 +19,7 @@ class TestArticle:
         magazine = Magazine("Vogue", "Fashion")
         article_1 = Article(author, magazine, "How to wear a tutu with style")
 
-        # Check if title remains unchanged when setting it to a non-string value
+        
         article_1.title = 500
         assert article_1.title == "How to wear a tutu with style"
         

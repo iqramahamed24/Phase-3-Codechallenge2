@@ -1,4 +1,3 @@
-import pytest
 from classes.many_to_many import Article, Magazine, Author
 
 class TestAuthor:
@@ -23,11 +22,11 @@ class TestAuthor:
         assert isinstance(author_1.name, str)
         assert isinstance(author_2.name, str)
 
-        # Check if name remains unchanged when attempting to modify it
+        
         author_1.name = "ActuallyTopher"
         assert author_1.name == "Carry Bradshaw"
 
-        author_2.name = 2  # This should not change the name
+        author_2.name = 2  
         assert author_2.name == "Nathaniel Hawthorne"
 
     def test_name_len(self):
